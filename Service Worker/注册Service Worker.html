@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ServiceWorker</title>
+</head>
+<!-- 
+当浏览器对 Service Worker 提供原生支持时，我们便可以在页面加载后注册指定的 JavaScript 文件，并运行在后台线程之中
+在 Chrome 浏览器里，可以访问 chrome://inspect/#service-workers和 chrome://serviceworker-internals/ 来检查 Service Worker 是否已经启用。
+ -->
+<body>
+  <h1>Hello World!</h1>
+  <script>
+    // 检查浏览器是否对 serviceWorker 有原生支持
+    if ('serviceWorker' in navigator) {
+      // 有原生支持时，在页面加载后开启新的 Service Worker 线程，从而优化首屏加载速度
+      window.addEventListener('load', function() {
+      // register 方法里第一个参数为 Service Worker 要加载的文件；第二个参数 scope 可选，用来指定 Service Worker 控制的内容的子目录
+      // service workers 的作用范围是根据其在目录结构中的位置决定的 !??
+        navigator.serviceWorker.register('./ServiceWorker.js').then(function(registration) {
+          // Service Worker 注册成功
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // Service Worker 注册失败
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
+<!-- 主线程parse -> 子线程install -> 主线程install -->
+<!-- 
+  安装完成并不意味着这个ServiceWorker会立马进入下一个阶段，除非之前没有新的ServiceWorker实例，
+  如果之前已有ServiceWorker，这个版本只是对ServiceWorker进行了更新，那么需要满足如下任意一个条件，新的ServiceWorker才会进入下一个阶段：
+    在新的ServiceWorker线程代码里，使用了self.skipWaiting() 
+    或者当用户导航到别的网页，因此释放了旧的ServiceWorker时候
+    或者指定的时间过去后，释放了之前的ServiceWorker
+  此时ServiceWorker的生命周期才进入Activating阶段
+ -->
+
+ <!-- 利用service worker可以捕获css文件,并利用脚本处理转换可以形成loader作用 -->

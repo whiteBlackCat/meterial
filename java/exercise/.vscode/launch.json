@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ImageViewer",
+            "request": "launch",
+            "mainClass": "ImageViewer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Welcome",
+            "request": "launch",
+            "mainClass": "Welcome",
+            "projectName": "welcome_40fefa26"
+        }
+    ]
+}

@@ -1,0 +1,239 @@
+#afui.myandroid {
+    font-family: "Slate Pro",Slate,"Myriad Pro","BBAlpha Sans",Helvetica;
+    font-size: 12pt;
+}
+
+#afui.myandroid .header {
+    background:#f60;
+    background:-ms-linear-gradient(65deg, #f60 0%,#00AFEE 100%);
+    background:-webkit-gradient(linear, left bottom, right top, color-stop(0%,#f60), color-stop(100%,#00AFEE));
+    background:-webkit-linear-gradient(65deg, #f60 0%,#00AFEE 100%);
+    background:linear-gradient(65deg, #f60 0%,#00AFEE 100%);
+    border-style:solid;
+    border-width:1px;
+    border-color:#009CE1 transparent #004E92 transparent;
+}
+
+#afui.myandroid .header h1 {
+    text-shadow:rgba(0,0,0,0.8) 0 1px 0;
+    font-weight:normal;
+}
+
+#afui.myandroid .list {
+    font-weight: normal;
+}
+
+#afui.myandroid #backButton {
+    display: block;
+    position: absolute;
+    line-height:60px;
+    left: 5px;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    padding: 0;
+    color: #fff;
+    text-shadow: none;
+    background-color: transparent;
+    border:none;
+    border-color: transparent;
+    height: 44px;
+    top:0;
+    border-radius: 0;
+    box-shadow:none;
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+    width:50px;
+    padding:0 !important;
+    margin:0 !important;
+}
+
+#afui.myandroid #backButton::before {
+    z-index: -1;
+    font-size:22px;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    border-color: transparent;
+    box-shadow: none;
+    -webkit-transform: none;
+    transform: none;
+    font-family: 'chevron';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\f054";
+    top:1px;
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+    background-color: transparent;
+}
+
+#afui.myandroid #backButton::after {
+    z-index: -1;
+    font-size:24px;
+    content: ' ';
+    position: absolute;
+    font-weight:bold;
+    background-color: transparent;
+    left:55px;
+    height:48px;
+    top:-5px;
+    width:2px;
+    background: #0aa9dc;
+    margin:auto;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    border-color: transparent;
+    box-shadow: none;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+#afui.myandroid .header .button {
+    color:#fff;
+    background:none;
+    text-shadow:0 -1px 0 #333;
+    border-color:transparent;
+}
+
+#afui.myandroid .footer {
+    border:none;
+    border-radius:0px;
+    background:none;
+    padding:0;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+}
+
+#afui.myandroid .footer>footer>a:not(.button) {
+    height:49px;
+    top:0px;
+    border-top:4px solid #000;
+    background:#1e1e1e;
+}
+
+#afui.myandroid .footer>footer>a.pressed:not(.button) {
+    border:0px;
+    border-top:4px solid #0aa9dc;
+    border-radius:0px;
+    background:#3a3a3a;
+    color:white;
+}
+
+#afui.myandroid .footer>footer>a:not(:last-of-type):not(.pressed):not(.button){
+    border-right:1px solid black;
+}
+
+#afui.myandroid .footer>footer>a.icon.pressed:not(.button):before {
+    color: white;
+}
+
+#afui.myandroid #aside_menu,
+#afui.myandroid #menu {
+    border-right:1px solid #bbb;
+    background: #fff;
+    color: #000;
+}
+
+#afui.myandroid #aside_menu .list > li > a,
+#afui.myandroid #menu .list > li > a {
+    color:inherit;
+}
+
+#afui.myandroid #aside_menu .list .divider,
+#afui.myandroid #menu .list .divider {
+    background:#fafafa;
+    color:black;
+}
+
+#afui.myandroid .list .divider {
+    background:#fafafa;
+    border-top:none;
+    color:black;
+    border-bottom: 1px solid #0aa9dc !important;
+}
+
+#afui.myandroid #aside_menu .list li, #afui.myandroid #aside_menu .list .divider, #afui.myandroid #aside_menu .list li:first-child, #afui.myandroid #aside_menu .list li:last-child,
+#afui.myandroid #menu .list li, #afui.myandroid #menu .list .divider, #afui.myandroid #menu .list li:first-child, #afui.myandroid #menu .list li:last-child {
+    border-bottom-color :#ccc;
+}
+
+#afui.myandroid .button ,
+#afui.myandroid .button-grouped *,
+#afui.myandroid .button-grouped > .button:first-child,
+#afui.myandroid .button-grouped.vertical *,
+#afui.myandroid .button-grouped.vertical >  .button:last-child, 
+#afui.myandroid > .header .button-grouped > .button {
+    border-color:#ccc;
+}
+
+#afui.myandroid > .header .button-grouped > .button.pressed {
+    background:#07a;
+}
+
+#afui.myandroid .panel {
+    background:#fff;
+}
+
+#afui.myandroid .afPopup {
+    border: solid 1px #ccc;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background:inherit;
+    color:inherit;
+    padding:0;
+}
+
+#afui.myandroid .afPopup>HEADER{
+    font-weight:normal;
+    font-size:20px;    
+    text-align:center;
+    margin:0;
+    padding:8px;
+    color:white;
+    border-radius: 2px;
+    background:#f60;
+    background:-ms-linear-gradient(65deg, #f60 0%,#00AFEE 100%);
+    background:-webkit-gradient(linear, left bottom, right top, color-stop(0%,#f60), color-stop(100%,#00AFEE));
+    background:-webkit-linear-gradient(65deg, #f60 0%,#00AFEE 100%);
+    background:linear-gradient(65deg, #f60 0%,#00AFEE 100%);    
+}
+
+#afui.myandroid .afPopup>DIV{
+    text-align:center;
+    padding:10px;
+}
+
+#afui.myandroid .afPopup>FOOTER{
+    padding:5px;
+}
+
+#afui.myandroid .afPopup>FOOTER>A#cancel{
+    width:120px;
+}
+
+#afui.myandroid .afPopup>FOOTER>A#action{
+    width:120px;
+}
+
+#afui.myandroid #af_actionsheet {
+    background:white;
+    color:inherit;
+}
+
+#afui.myandroid #af_actionsheet a{
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px solid #ccc;
+    background:#eee;
+    color:#111;
+}

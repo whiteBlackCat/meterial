@@ -1,0 +1,42 @@
+@import 'import';
+
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.title,
+.desc {
+  color: #222;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.icon {
+  color: #c2c2c2;
+  opacity: 1;
+  animation: blink 1s linear infinite;
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

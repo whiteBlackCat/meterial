@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Webpack App</title>
+</head>
+
+<body>
+  <!-- 
+  对于主页面,我所观测到的载入主程序就是
+  const app = new Vue({
+    router: router,
+    render: h => h(App)
+  }).$mount('#app')
+  当然若是提前创建DOM节点,页面上便不需要#app标签
+   -->
+  <script type="text/javascript" src="bundle.js"></script>
+</body>
+
+</html>
