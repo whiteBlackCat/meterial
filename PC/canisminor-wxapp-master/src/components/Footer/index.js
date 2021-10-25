@@ -1,3 +1,0 @@
-const component = {};
-
-Component(component);

@@ -1,4 +1,0 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <image class="detail-image" src="../../image/detail.png"  mode="aspectFit"></image>
-</view>

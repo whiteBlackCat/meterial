@@ -1,3 +1,0 @@
-<view class="intro-1 container">
-	<Title title="{{ title.title }}" desc="{{ title.desc }}"/>
-</view>
